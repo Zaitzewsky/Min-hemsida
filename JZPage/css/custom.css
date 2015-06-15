@@ -1,3 +1,45 @@
+/* Animate CSS */
+.navbar {
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -o-animation-delay: .3s;
+  -ms-animation-delay: .3s;
+}
+.profile-picture {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.3s;
+  -o-animation-delay: 1.3s;
+  -ms-animation-delay: 1.3s;
+}
+
+.about-me {
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  -o-animation-delay: 1.3s;
+  -ms-animation-delay: 1.3s;
+}
+
+.btn-about{
+  -webkit-animation-delay: .9s;
+  -moz-animation-delay: .9s;
+  -o-animation-delay: .9s;
+  -ms-animation-delay: .9s;
+}
+.btn-portfolio{
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+}
+.btn-contact{
+  -webkit-animation-delay: 1.1s;
+  -moz-animation-delay: 1.1s;
+  -o-animation-delay: 1.1s;
+  -ms-animation-delay: 1.1s;
+}
+/* /Animate CSS */
+
+
 p { font-family: 'Open Sans', sans-serif; }
 hr { border: 1px solid #dcdcdc; }
 
@@ -38,7 +80,9 @@ hr { border: 1px solid #dcdcdc; }
 	color: #ffffff;
 }
 
-.navbar-default .navbar-nav>li>a:hover { color: #ffffff; background-color: #535252}
+.navbar-default .navbar-nav>li>a:hover { 
+	color: #ffffff; background-color: #535252
+}
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
@@ -77,10 +121,22 @@ li.facebook a {
 	box-shadow: none;
 	border-right: none;
 }
+
+li.github a {
+	width: 80px;
+	background-color: #ab0ac3 !important;
+	color: #ffffff !important;
+	font-size: 2.0em;
+	text-align: center;
+	box-shadow: none;
+	border-right: none;
+}
 /* /SOCIAL ICONS */
 
 /* SPINNING ICONS */
-i:hover{
+.fa-twitter:hover,
+.fa-facebook:hover,
+.fa-github:hover{
     -webkit-animation-name: rotate; 
     -webkit-animation-duration: 1s; 
     -webkit-animation-iteration-count: infinite;
@@ -115,7 +171,6 @@ i:hover{
 header {
 	height: 600px;
 	text-align: center;
-	/* background-color: #6d6d6d; */
 	background: url(../img/background.jpg);
 	background-attachment: fixed;
 	padding-top: 120px; 
@@ -161,8 +216,8 @@ header p{
 }
 
 .main-content h4 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.7em;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.9em;
 	color: #3f3f3f;
 }
 
@@ -183,25 +238,131 @@ header p{
 
 /* PORTFOLIO */
 
-.column {
+.main-content .column {
 	text-align: center;
 }
-.column h4 {
+.main-content .column h4 {
 	margin-top: 20px;
 	color: #6a6a6a;
 	font-size: 1.3em;
 	text-transform: uppercase;
 }
-.column p {
+.main-content .column p {
 	margin-top: 10px;
 	color: #8a8a8a;
 	line-height: 1em;
 }
 
-.portfolio h3 {
+.main-content .portfolio h3 {
 	margin-bottom: 40px;
 }
 /* /PORTFOLIO */
+
+/* CONTACT */
+.main-content .contact .row {
+	padding-top: 20px;
+}
+
+.main-content .contact p {
+	font-size: 1.2em;
+	color: #8a8a8a;
+}
+
+.main-content .contact h4 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.9em;
+	color: #3f3f3f;
+}
+
+	/* FORM */
+	input {
+		height: 50px;
+		width: 100%;
+		border: 3px solid #b9b9b9;
+		color: #b9b9b9;
+		padding: 0 20px;
+		margin-bottom: 20px;
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.3em;
+	}
+
+	.form-control {
+		resize: none;
+		border: 3px solid #b9b9b9;
+		color: #b9b9b9;
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.3em;
+		padding: 10px 20px;
+	}
+
+	.form-control:focus {
+		border: 3px solid #8901ab;
+		box-shadow: 0 0 5px 1px #8901ab;
+	}
+
+	input:focus {
+		border: 3px solid #8901ab;
+		box-shadow: 0 0 5px 1px #8901ab;
+	}
+
+	.send {
+		width: 180px;
+		background-color: #ffffff;
+	}
+
+	.send:hover {
+		color: #8901ab;
+		border-color: #8901ab;
+	}
+	/* /FORM */
+
+	/* QUICK INFO */
+	.quick-info i {
+		position: absolute;
+		left: 0;
+		padding-top: 2px;
+		color: #b9b9b9;
+		font-size: 1.4em;
+	}
+
+	.quick-info p {
+		font-family: 'Oswald', sans-serif;
+		color: #C3C3C3 !important;
+		padding-left: 15px;
+	}
+	/* /QUICK INFO */
+
+/* /CONTACT */
+
+/* FOOTER */
+
+footer {
+	width: 100%;
+	height: 200px;
+	background-color: #474747;
+	color: #ffffff;
+	padding-top: 90px;
+}
+
+.pull-left {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.5em;
+}
+
+.pull-left a {
+	color: #ffffff;
+}
+
+.pull-right {
+	margin-top: -20px;
+	color: #acacac;
+}
+
+.pull-right a {
+	color: #ffffff;
+}
+
+/* /FOOTER */
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) {
@@ -213,7 +374,7 @@ header p{
 
 	header h2{
 		margin-top: 50px;
-		font-family: 'Oswald', sans-serif;
+		font-family: 'Oswald', sans-serif7;
 		color: #ffffff;
 		font-size: 2.5em;
 	}
@@ -225,5 +386,13 @@ header p{
 		margin-right: 30px;
 		color: #ffffff;
 		font-family: 'Open Sans', sans-serif;
+	}
+	
+	.quick-info i{
+		padding-left: 15px;
+	}
+
+	.quick-info p{
+		padding-left: 30px;
 	}
 }
