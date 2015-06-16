@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="icon" type="image/png" href="img/JZicon.png">
     <title>Jacinto Zaitzewsky | Systemutvecklare</title>
 
     <!-- Bootstrap -->
@@ -25,7 +26,7 @@
   </head>
   <body>
   <!-- NAVIGATION BAR -->
-  <nav class="navbar navbar-default animated bounceInDown" role="navigation">
+  <nav class="navbar navbar-default" role="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -35,7 +36,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="logo"></a>
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="logo animated bounceInDown"></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,16 +47,16 @@
           <!-- <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li> -->
           <!-- /HOME button, maybe use later. -->
         
-          <li class="btn-about animated bounceInDown"><a href="#">OM MIG</a></li>
-          <li class="btn-portfolio animated bounceInDown"><a href="#">PORTFOLIO</a></li>
-          <li class="btn-contact animated bounceInDown"><a href="#">KONTAKT</a></li>
+          <li class="btn-about animated bounceInDown"><a id="about-me-link" href="#">OM MIG</a></li>
+          <li class="btn-portfolio animated bounceInDown"><a id="portfolio-link" href="#">PORTFOLIO</a></li>
+          <li class="btn-contact animated bounceInDown"><a id="contact-link" href="#">KONTAKT</a></li>
         </ul>
 
         <!-- SOCIAL ICONS -->
         <ul class="nav navbar-nav navbar-right">
-          <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li class="github"><a href="#"><i class="fa fa-github"></i></a></li>
+          <li class="twitter animated bounceInDown"><a href="https://twitter.com/jzait" target="blank_"><i class="fa fa-twitter"></i></a></li>
+          <li class="facebook animated bounceInDown"><a href="https://www.facebook.com/jacinto.zaitzewsky.systemutvecklare?ref=hl" target="blank_"><i class="fa fa-facebook"></i></a></li>
+          <li class="github animated bounceInDown"><a href="https://github.com/Zaitzewsky" target="blank_"><i class="fa fa-github"></i></a></li>
         </ul>
         <!-- /SOCIAL ICONS -->
 
@@ -67,9 +68,9 @@
   <!-- HEADER -->
   <header class="container-fluid">
     <div class="row">
-      <img src="img/profile-picture.jpg" class="img-circle profile-picture animated fadeIn">
-      <h2>JACINTO ZAITZEWSKY | SYSTEMUTVECKLARE</h2>
-      <P>Hej och välkommen till min hemsida! Mitt namn är Jacinto Zaitzewsky och jag studerar till systemutvecklare. Här kan du hitta mer information om mig, vad exakt jag studerar, mitt CV och hur du kan komma i kontakt med mig.</P>
+      <img src="img/profile-picture.jpg" class="img-circle profile-picture animated flipInX">
+      <h2 class="header-titletext animated rollIn">JACINTO ZAITZEWSKY | SYSTEMUTVECKLARE</h2>
+      <P class="header-subtitletext animated rollIn">Hej och välkommen till min hemsida! Mitt namn är Jacinto Zaitzewsky och jag studerar till systemutvecklare. Här kan du hitta mer information om mig, vad exakt jag studerar, mitt CV och hur du kan komma i kontakt med mig.</P>
     </div>
     
   </header>
@@ -80,7 +81,7 @@
     <div class="row">
 
       <!-- about me -->
-      <div class="about-me animated flipInX">
+      <div id="1" class="about-me animated slideInUp">
         <h3>OM MIG</h3>
         <h4>JACINTO ZAITZEWSKY <small>SYSTEMUTVECKLARE</small></h4>
         <p>Etiam pellentesque mi et magna porta lacinia. Morbi in odio ut eros ornare porttitor. Aliquam erat volutpat. Sed volutpat vehicula leo eget dictum. Vivamus quis dui suscipit orci blandit elementum. Aliquam sem odio, vulputate eu lectus eget, molestie tincidunt eros. Nulla non interdum odio. Proin vel nisl in metus dignissim ornare. Suspendisse potenti. Aenean non egestas lorem.</p>
@@ -90,7 +91,7 @@
       <hr>
 
       <!-- portfolio -->
-      <div class="portfolio">
+      <div id="2" class="portfolio">
         <h3>PORTFOLIO</h3>
 
         <div class="row">
@@ -115,7 +116,7 @@
 
       <!-- contact-info -->
 
-      <div class="contact">
+      <div id="3" class="contact">
 
         <h3>KONTAKTINFO</h3>
         <h4>HÖR AV DIG</h4>
@@ -126,20 +127,20 @@
           <!-- contact form -->
           <div class="col-md-9">
             
-          <form action="mailto:micales@hotmail.se" method="post">
+          <form action="form-process.php" method="post">
             <div class="form-group">
               <input type="text" name="fullname" placeholder="FÖR- OCH EFTERNAMN">
             </div>
             <div class="form-group">
               <input type="email" name="email" placeholder="E-POST">
             </div>
-            <div>
+            <div class="form-group">
               <input type="text" name="topic" placeholder="ÄMNE">
             </div>
             <div class="form-group">
               <textarea class ="form-control" name="message" placeholder="MEDDELANDE" rows="12"></textarea>
             </div>
-            <input class ="send" type="submit" value="SKICKA">
+            <input class ="send" type="submit" name="submit" value="SKICKA">
           </form>
 
           </div>
@@ -147,9 +148,9 @@
 
           <!-- contact icons -->
           <div class="col-md-3 quick-info">
-            <div><i class="fa fa-envelope-o"></i><p>micales@hotmail.se</p></div>
-            <div><i class="fa fa-map-marker"></i><p>Tärnvägen 12B, 70285 Örebro</p></div>
-            <div><i class="fa fa-phone"></i><p>073-966 02 95</p></div>
+            <div><i class="fa fa-envelope-o"></i><a href="mailto:micales@hotmail.se"><p>micales@hotmail.se</p></a></div>
+            <div><i class="fa fa-map-marker"></i><a href="https://www.google.se/maps/place/T%C3%A4rnv%C3%A4gen+12B,+702+85+%C3%96rebro/@59.2582574,15.2584564,17z/data=!3m1!4b1!4m2!3m1!1s0x465c144f5cef060d:0x40161332768e201f" target="blank_"><p>Tärnvägen 12B, 70285 Örebro</p></a></div>
+            <div><i class="fa fa-phone"></i><a href="tel: 0739660295"><p>073-966 02 95</p></a></div>
           </div>
           <!-- /contact icons -->
         
@@ -166,9 +167,9 @@
     <div class="container">
       <div class="pull-left"><a href="index.html">JACINTOZAITZEWSKY.SE</a></div>
       <div class="pull-right">
-        <p>Originalet för bakgrundsbilden är gjord av <a href="https://www.flickr.com/photos/astragony/8401795212/">Daniel Zedda</a></p>
-        <p>Originalet för första bilden i portfolion (boken) är gjord av <a href="https://www.flickr.com/photos/el7bara/118689362/in/photolist-bujdj-6ajSMi-oD6ctr-p2KN7R-p3fLxc-oUkuVe-oso9Fk-2SgRsM-e2kB7J-2qKgwi-py6bQk-osobUN-dKhuCz-p3fDQz-nckSbz-pjKV4T-8XUUfE-oDVxYj-eW1xcN-2LD2Ey-m9Bmb6-ofqkLo-oBQWNU-dhnCNB-oFU5Ji-nSRAPy-fSRzf-5CRc4Q-6ZRuqt-mQHR6Q-ggHmzF-pMr4QU-oMyt3Z-8zvKHp-i4fLrh-jtuyd8-rDWL3X-qGBeL2-gvF1V-bZeRWC-4Cx1vv-miv6Ao-5t7uJJ-e6pFR5-cFkqmQ-s9avkP-k9CJv3-kVKFpt-4mjqBi-p2KLB6">(el7bara)</a></p>
-        <p>Originalet för första bilden i portfolion (kollegieblocket) är gjord av <a href="https://www.flickr.com/photos/martinhoward/3402855980/in/photolist-hyDkQ3-JkZJi-4G91Up-7NvPqy-8LptXi-epLQoD-eqH3Mu-epLLnv-epLLkV-eqH1G3-aZHoTR-8wnLFA-eqH27u-62vxQ2-epLMb8-eqH2yL-epLLoM-epLLyk-eqH7ym-epLQSV-epLPGp-eqH4tG-epLLCM-eqH58Q-4wrJZ3-78atgz-nuBmk-7aohaZ-fJ3N7N-6bGwwG-sx2Z9V-4mT3pa-7L8fjx">Martin Howard</a></p>
+        <p>Originalet för bakgrundsbilden är gjord av <a href="https://www.flickr.com/photos/astragony/8401795212/" target="_blank">Daniel Zedda</a></p>
+        <p>Originalet för första bilden i portfolion (boken) är gjord av <a href="https://www.flickr.com/photos/el7bara/118689362/in/photolist-bujdj-6ajSMi-oD6ctr-p2KN7R-p3fLxc-oUkuVe-oso9Fk-2SgRsM-e2kB7J-2qKgwi-py6bQk-osobUN-dKhuCz-p3fDQz-nckSbz-pjKV4T-8XUUfE-oDVxYj-eW1xcN-2LD2Ey-m9Bmb6-ofqkLo-oBQWNU-dhnCNB-oFU5Ji-nSRAPy-fSRzf-5CRc4Q-6ZRuqt-mQHR6Q-ggHmzF-pMr4QU-oMyt3Z-8zvKHp-i4fLrh-jtuyd8-rDWL3X-qGBeL2-gvF1V-bZeRWC-4Cx1vv-miv6Ao-5t7uJJ-e6pFR5-cFkqmQ-s9avkP-k9CJv3-kVKFpt-4mjqBi-p2KLB6" target="_blank">(el7bara)</a></p>
+        <p>Originalet för andra bilden i portfolion (kollegieblocket) är gjord av <a href="https://www.flickr.com/photos/martinhoward/3402855980/in/photolist-hyDkQ3-JkZJi-4G91Up-7NvPqy-8LptXi-epLQoD-eqH3Mu-epLLnv-epLLkV-eqH1G3-aZHoTR-8wnLFA-eqH27u-62vxQ2-epLMb8-eqH2yL-epLLoM-epLLyk-eqH7ym-epLQSV-epLPGp-eqH4tG-epLLCM-eqH58Q-4wrJZ3-78atgz-nuBmk-7aohaZ-fJ3N7N-6bGwwG-sx2Z9V-4mT3pa-7L8fjx" target="_blank">Martin Howard</a></p>
       </div>
     </div>
   </footer>
@@ -180,5 +181,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
   </body>
 </html>
