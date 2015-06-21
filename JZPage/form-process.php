@@ -2,7 +2,7 @@
 
 $fullname = $_POST['fullname'];
 $visitor_email = $_POST['email'];
-$subject = $_POST['topic'];
+$subject = "From my website"
 $message = $_POST['message'];
 
 $to = "micales@hotmail.se"

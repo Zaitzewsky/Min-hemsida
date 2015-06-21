@@ -97,7 +97,7 @@
         <div class="row">
           <!-- first Column -->
           <div class="col-md-6 column">
-            <img src="img/books-texted.jpg" class="img-responsive">
+            <a href="pdfs/Jacinto-Zaitzewsky-Studieintyg.pdf" download="Jacinto-Zaitzewsky-Studieintyg.pdf" target="blank_"><img src="img/books-texted.jpg" class="img-responsive"></a>
             <p>Här kan du ladda ner mitt studieintyg och se vilka kurser jag hittils avklarat!</p>
           </div>
           <!-- /first Column -->
@@ -127,20 +127,17 @@
           <!-- contact form -->
           <div class="col-md-9">
             
-          <form action="form-process.php" method="post">
+          <form id="form" action="form-process.php" method="post">
             <div class="form-group">
-              <input type="text" name="fullname" placeholder="FÖR- OCH EFTERNAMN">
+              <input required aria-required=”true” pattern="[A-Za-z ]+" id="fullname" title="Vänligen fyll i endast bokstäver!" type="text" name="fullname" placeholder="FÖR- OCH EFTERNAMN">
             </div>
             <div class="form-group">
-              <input type="email" name="email" placeholder="E-POST">
+              <input required aria-required=”true” id="email" type="email" name="email" placeholder="E-POST">
             </div>
             <div class="form-group">
-              <input type="text" name="topic" placeholder="ÄMNE">
+              <textarea required aria-required=”true” id="message" class ="form-control" name="message" placeholder="MEDDELANDE" rows="12"></textarea>
             </div>
-            <div class="form-group">
-              <textarea class ="form-control" name="message" placeholder="MEDDELANDE" rows="12"></textarea>
-            </div>
-            <input class ="send" type="submit" name="submit" value="SKICKA">
+            <input id="submit" class ="send" type="submit" name="submit" value="SKICKA">
           </form>
 
           </div>

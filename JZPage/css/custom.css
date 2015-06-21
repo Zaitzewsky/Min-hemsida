@@ -344,6 +344,7 @@ header p{
 	.send:hover {
 		color: #8901ab;
 		border-color: #8901ab;
+		box-shadow: 0 0 5px 1px #8901ab;
 	}
 	/* /FORM */
 
