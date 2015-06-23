@@ -263,6 +263,16 @@ header p{
 .main-content .about-me p {
 	font-size: 1.2em;
 	color: #8a8a8a;
+	margin-bottom: 35px;
+}
+
+.main-content .about-me a {
+	text-decoration: none;
+	color: #8a8a8a;
+}
+
+.main-content .about-me a:hover {
+	color: #343434;
 }
 
 /* /ABOUT ME */
@@ -516,8 +526,46 @@ footer {
 
 	.pull-right p {
 		margin-top: 1px;
-		line-height: 1.3em;
+		line-height: 1em;
 	}
 
-/* /FOOTER */
+	/* /FOOTER */
+
+	/* ABOUT ME */
+
+	.main-content h4 {
+		font-size: 1.5em;
+	}
+
+	.main-content h4 small {
+		font-size: .6em;
+	}
+
+	.main-content .about-me p {
+		font-size: 1em;
+	}
+
+	/* /ABOUT ME */
+
+	/* CONTACT */
+
+	.main-content .contact p {
+		font-size: 1em;
+	}
+
+	.main-content .contact h4 {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.5em;
+		color: #3f3f3f;
+	}
+
+	input {
+		font-size: 1em;
+	}
+
+	.form-control {
+		font-size: 1em;
+	}
+
+	/* /CONTACT */
 }
