@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#474747">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <link rel="icon" type="image/png" href="img/JZicon.png">
-    <title>Jacinto Zaitzewsky | Systemutvecklare</title>
+    <title>Jacintos Portfolio</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -16,6 +18,9 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" href="css/Back-to-top-css/style.css">
+
+    <script src="js/Back-to-top-js/modernizr.js"></script> <!-- modernizr -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,7 +31,7 @@
   </head>
   <body>
   <!-- NAVIGATION BAR -->
-  <nav class="navbar navbar-default" role="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -41,10 +46,16 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">        
+        <ul class="nav navbar-nav">
+
+          <!-- HOME button, maybe use later. -->
+          <!-- <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li> -->
+          <!-- /HOME button, maybe use later. -->
+        
           <li class="btn-about animated bounceInDown"><a id="about-me-link" href="#">OM MIG</a></li>
           <li class="btn-portfolio animated bounceInDown"><a id="portfolio-link" href="#">PORTFOLIO</a></li>
           <li class="btn-contact animated bounceInDown"><a id="contact-link" href="#">KONTAKT</a></li>
+          <li class="btn-language animated bounceInDown"><a href="english.html">IN ENGLISH</a></li>
         </ul>
 
         <!-- SOCIAL ICONS -->
@@ -52,13 +63,7 @@
           <li class="twitter animated bounceInDown"><a href="https://twitter.com/jzait" target="blank_"><i class="fa fa-twitter"></i></a></li>
           <li class="facebook animated bounceInDown"><a href="https://www.facebook.com/jacinto.zaitzewsky.systemutvecklare?ref=hl" target="blank_"><i class="fa fa-facebook"></i></a></li>
           <li class="github animated bounceInDown"><a href="https://github.com/Zaitzewsky" target="blank_"><i class="fa fa-github"></i></a></li>
-          <li class="dropdown animated bounceInDown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"></i></a>
-              <ul class="dropdown-menu">
-                <li class="submenu"><a href="index.html">SV</a></li>
-                <li class="submenu"><a href="english.html">EN</a></li>
-              </ul>
-          </li>
+          <li class="linkedin animated bounceInDown"><a href="https://se.linkedin.com/in/jacinto-zaitzewsky-62475710a" target="blank_"><i class="fa fa-linkedin"></i></a></li>
         </ul>
         <!-- /SOCIAL ICONS -->
 
@@ -69,7 +74,7 @@
 
   <!-- HEADER -->
   <header class="container-fluid">
-    <div class="row">
+    <div id="headerDiv" class="row">
       <img src="img/profilePicture.jpg" class="img-circle profile-picture animated flipInX">
       <h2 class="header-titletext animated rollIn">JACINTO ZAITZEWSKY | SYSTEMUTVECKLARE</h2>
       <P class="header-subtitletext animated rollIn">Hej och välkommen till min hemsida! Mitt namn är Jacinto Zaitzewsky och jag studerar till systemutvecklare. Här kan du hitta mer information om mig, vad exakt jag studerar, mitt CV och hur du kan komma i kontakt med mig.</P>
@@ -85,24 +90,33 @@
       <!-- about me -->
       <div id="1" class="about-me animated slideInUp">
         <h3>OM MIG</h3>
-        
-        <h4>JACINTO ZAITZEWSKY <small>VEM ÄR JAG</small></h4>
-        <p>Några ord som beskriver mig som person: <b>Fokuserad</b>, <b>analytisk</b>, <b>reflekterande</b>. <b>Driven</b>, <b>nyfiken</b>, <b>social</b>. Jag kan stänga in mig mellan fyra väggar under ett halvt dygn för att sedan komma ut med en kodlösning eller en färdigtittad tv-serie. Men jag drivs också av att ge mig ut i världen och anta nya utmaningar, få nya perspektiv och träffa nya människor! Jag är aldrig rädd att ge mig ut i okända territorium.</p>
-
-        <h4>LITE MER OM MIG <small>HÅRDFAKTAN</small></h4>
-        <p>Mitt fullständiga namn är Jacinto Igor Zaitzewsky Micales. Jag är 20 år gammal, är född och uppvuxen i Stockholm och studerar just nu Systemvetenskap på Örebro Universitet. På somrarna arbetar jag i butik och reser gärna ut i världen. Under terminerna ägnar jag min tid åt studier och träning. Någon form av fysisk aktivitet är viktig för att hålla mig fräsch och energisk när jag studerar eller arbetar.</p>
+            <h4>JACINTO ZAITZEWSKY <small>VEM ÄR JAG</small></h4>
+            <p>Mitt fullständiga namn är Jacinto Igor Zaitzewsky Micales. Jag är 21 år gammal, är född och uppvuxen i Stockholm och studerar just nu min sista termin i Systemvetenskap vid Örebro Universitet.</p>
 
         <h4>ÖREBRO UNIVERSITET <small>STUDIERNA</small></h4>
-        <p>Jag har studerat på Örebro Universitet sedan hösten 2013. Sedan dess har jag tillsammans med klasskamrater fått utveckla affärssystem i Java, bygga databaser med SQL, skapa hemsidor med HTML/CSS och Javascript (och Jquery), en podcastapp i C# och en dejtinghemsida i ASP.Net med MVC. Bortsett från programmeringsspråk så har vi fått hålla våra egna SCRUM-projekt med Extreme Programming.</p>
+        <p>Jag har studerat på Örebro Universitet sedan hösten 2013. Sedan dess har jag tillsammans med klasskamrater fått utveckla affärssystem i Java, bygga databaser med SQL, skapa hemsidor med HTML/CSS och Javascript (och              jQuery), en podcastapp i C# och en dejtinghemsida i ASP.Net med MVC. Bortsett från programmeringsspråk så har vi fått hålla våra egna SCRUM-projekt med Extreme Programming.</p>
 
         <h4>UTLANDSTERMIN <small>SAN DIEGO STATE UNIVERSITY</small></h4>
-        <p>Den sjätte januari 2015 satte jag mig på ett flygplan mot San Diego för att påbörja min vårtermin på San Diego State University. Under det halvår som jag vistades i USA växte jag som person tack vare att jag lärde känna människor från olika kulturer, ställdes inför nya utmaningar och hade förmånen att leva i en främmande miljö. Dessutom förbättrades min engelska avsevärt.
+        <p>Den sjätte januari 2015 satte jag mig på ett flygplan mot San Diego för att påbörja min vårtermin på San Diego State University. Under det halvår som jag vistades i USA växte jag som person tack vare att jag lärde känna         människor från olika kulturer, ställdes inför nya utmaningar och hade förmånen att leva i en främmande miljö. Dessutom förbättrades min engelska avsevärt.
         <br>
         <br>
-        Under terminen i San Diego gick jag bland annat kursen "Social, Legal and Ethical Issues in Computer Science", där begreppen "The Naked Future", "The Internet of Things" och "The Singularity" diskuterades. Kursen berörde frågor som; när kommer mänskligheten att skapa riktig artificell intelligens? Hur lär man en robot vad som är rätt och fel - och hur definierar man egentligen rätt och fel? Vad är telemetri? Hur kommer framtiden att te sig när gränsen mellan privatliv och det offentliga rummet suddas ut?</p>
+        Under terminen i San Diego gick jag bland annat kursen "Social, Legal and Ethical Issues in Computer Science", där begreppen "The Naked Future", "The Internet of Things" och "The Singularity" diskuterades. Kursen berörde           frågor som; när kommer mänskligheten att skapa riktig artificell intelligens? Hur lär man en robot vad som är rätt och fel - och hur definierar man egentligen rätt och fel? Vad är telemetri? Hur kommer framtiden att te sig         när gränsen mellan privatliv och det offentliga rummet suddas ut?</p>
 
+        <h4>VAD JAG GÖR NU <small>MITT EXAMENSARBETE</small></h4>
+        <p>I nuläget sitter jag på ett företag i centrala Örebro och utför mitt examensarbete tillsammans med en kurskamrat. Examensarbetet är ett projekt som pågår under hela våren. Uppdraget är att utveckla en hemsida där företag kan skriva upp sig på en sorts prenumeration av olika typer av bilservice för deras företagsbilar. Tanken är då att hemsidan har X antal förare som kommer ut till företaget, hämtar bilnycklarna, åker och exempelvis tvättar bilen och kommer sedan tillbaka ca två timmar senare.
+        <br>
+        <br>
+            Resultatet skall vara en fungerande webbapplikation med funktioner som schemabokning av diverse servicetjänster för din bil, inloggning för kunder, förare och en administratör och administrationsverktyg för att exempelvis kunna redigera tjänster, lägga till/ta bort personal.
+        <br>
+        <br>    
+            Tekniker för systemet är en hel del. På serversidan ska vi utveckla, i ASP.NET, en ny databas i Entity Framework 6 Code First, ett WebAPI med diverse CRUD-funktionalitet och sedan ett repository för att kommunicera mellan databasen och APIet. Stort fokus ligger på att databasen och APIet ska vara löst kopplade och testade. För att uppnå en hög grad av lös koppling så har vi tänkt följa Onion Architecture. För att testa databasen och APIet har vi tänkt använda ramverket NUnit. På klientsidan ska vi utveckla hemsidan som en ren Angular-app utan någon ASP.NET involverad. Fokus ligger inte på någon dedikerad front-end utveckling. Bootstrap ska användas för struktur och längre än så går vi inte gällande front-end. Fokus ligger fortfarande på back-end utvecklingen.
+        <br>
+        <br>    
+            Examensarbetet pågår från och med 20 januari till 24 maj och är tänkt att vara en nerskalad version av ett ”riktigt” systemutvecklingsprojekt. Detta innebär att vi får möta kund och hantera dennes krav, skriva en projektplan som bland annat innehåller en risk- och resursanalys, använda någon systemutvecklingsmetod (i vårt fall Scrum) och sedan iterativt, tillsammans med kunden, utveckla det här bokningssystemet.
+</p>
+        
         <h4>VAD JAG SÖKER <small>DEN PERFEKTA ARBETSPLATSEN</small></h4>
-        <p>Sommaren 2016 kommer jag ta min examen i Systemvetenskap. Jag vill verka på en arbetsplats där det finns utrymme att utvecklas, där det är högt i tak och där man jobbar i team för att uppnå ett gemensamt mål. Men jag hoppas också få möjlighet att arbeta självständigt och att ta egna initiativ.</p>
+        <p>Sommaren 2016 kommer jag ta min examen i Systemvetenskap. Jag vill verka på en arbetsplats där det finns utrymme för mig att bli en bra utvecklare, där det är högt i tak och där man kan fråga om hjälp - och få bra hjälp så att man kan drivas vidare i sin kunskapsutveckling. Jag gillar att jobba i team för uppnå ett gemensamt mål. Samtidigt hoppas jag också få möjlighet att i någon mån arbeta självständigt och kunna ta egna initiativ och egna beslut.</p>
       </div>
       <!-- /about me -->
       
@@ -115,8 +129,8 @@
         <div class="row">
           <!-- first Column -->
           <div class="col-md-6 column">
-            <a href="pdfs/Jacinto-Zaitzewsky-Studieintyg.pdf" download="Jacinto-Zaitzewsky-Studieintyg.pdf" target="blank_"><img src="img/books-texted.jpg" class="img-responsive"></a>
-            <p>Klicka på bilden ovan för att ladda ner mitt studieintyg och se vilka kurser jag hittils avklarat!</p>
+            <img src="img/books-texted.jpg" class="img-responsive">
+            <p>Studieintyg lämnas glädligen på begäran!</p>
           </div>
           <!-- /first Column -->
 
@@ -145,7 +159,7 @@
           <!-- contact form -->
           <div class="col-md-9">
             
-          <form id="form" action="form-process.php" method="post">
+          <form autocomplete="on" id="form" method="post" action="form-process.php">
             <div class="form-group">
               <input required aria-required=”true” pattern="[A-ZÅÄÖa-zåäö ]+" id="fullname" title="(Vänligen fyll i endast bokstäver)" type="text" name="fullname" placeholder="FÖR- OCH EFTERNAMN">
             </div>
@@ -156,7 +170,7 @@
               <input required aria-required=”true” pattern="5" title="(Vad är 2 + 3?)" id="humanQuestion" type="text" name="human-question" placeholder="2 + 3 = ?">
             </div>
             <div class="form-group">
-              <textarea required aria-required=”true” id="message" class ="form-control" name="message" placeholder="MEDDELANDE" rows="12"></textarea>
+              <textarea autocomplete"off" required aria-required=”true” id="message" class ="form-control" name="message" placeholder="MEDDELANDE" rows="12"></textarea>
             </div>
             <input id="submit" class ="send" type="submit" name="submit" value="SKICKA">
           </form>
@@ -168,7 +182,7 @@
           <div class="col-md-3 quick-info">
             <div><i class="fa fa-envelope-o"></i><a href="mailto:micales@hotmail.se"><p>micales@hotmail.se</p></a></div>
             <div><i class="fa fa-map-marker"></i><a href="https://www.google.se/maps/place/T%C3%A4rnv%C3%A4gen+12B,+702+85+%C3%96rebro/@59.2582574,15.2584564,17z/data=!3m1!4b1!4m2!3m1!1s0x465c144f5cef060d:0x40161332768e201f" target="blank_"><p>Tärnvägen 12B, 70285 Örebro</p></a></div>
-            <div><i class="fa fa-phone"></i><a href="tel: 0739660295"><p>073-966 02 95</p></a></div>
+            <div><i class="fa fa-phone"></i><a href="tel: 0739660295"><p>073 - 966 02 95</p></a></div>
           </div>
           <!-- /contact icons -->
         
@@ -192,6 +206,10 @@
     </div>
   </footer>
   <!-- /FOOTER -->
+  
+  <!-- BACK-TO-TOP -->
+    <a href="#0" class="cd-top">Top</a>
+  <!-- /BACK-TO-TOP -->
 
 
 
@@ -200,5 +218,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script src="js/Back-to-top-js/main.js"></script>
   </body>
 </html>
